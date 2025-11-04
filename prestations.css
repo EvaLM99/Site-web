@@ -552,6 +552,7 @@ h2 {
 /* ================= */
 @media (max-width: 768px) {
   /* page-title section */
+  
   .page-title {
     height: auto;
     min-height: 50vh;
@@ -588,7 +589,7 @@ h2 {
   }
 
   .page-title p {
-    top: 58%;
+    top: 55%;
     width: auto;
     max-width: 90%;
     font-size: 15px;
