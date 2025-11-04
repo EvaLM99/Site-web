@@ -559,10 +559,11 @@ h2 {
   }
 
   .page-title img {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: auto;
     max-height: 45vh;
+    object-fit: cover;
   }
 
   .page-title h1, .page-title p {
@@ -632,7 +633,7 @@ h2 {
     border-radius: 15px;
   }
 
-  /* Process table - CORRECTION TIMELINE */
+  /* Process table */
   .process {
     width: 100%;
     margin: 1.5rem 0;
@@ -640,33 +641,15 @@ h2 {
     box-sizing: border-box;
   }
 
-  /* Masquer les numéros et "Livrable" sur mobile */
-  .process tr::before,
-  .process tr:not(:last-child)::before,
-  .process tr:last-child::before {
-    display: none !important;
-  }
-
   .process td {
     padding: 15px;
     font-size: 14px;
-    border: 1px solid var(--main-color) !important;
-    text-align: left !important;
   }
 
-  /* Ajouter les numéros directement dans le contenu avec du texte */
-  .process tr:not(:last-child) td::before {
-    content: counter(row) ". ";
-    font-weight: bold;
-    color: var(--main-color);
-    margin-right: 5px;
-  }
-
-  .process tr:last-child td::before {
-    content: "✓ Livrable : ";
-    font-weight: bold;
-    color: var(--livrable-color);
-    font-style: italic;
+  .process tr:not(:last-child)::before {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
   }
 
   /* Supports et Plans */
@@ -678,7 +661,7 @@ h2 {
     margin: 1.5rem auto;
   }
 
-  .support-card, .plan-card {
+  .support, .plan-card {
     width: 100%;
     max-width: 300px;
     margin: 0 auto 1.5rem;
@@ -690,7 +673,7 @@ h2 {
     padding-bottom: 60px;
   }
 
-  .plan-card::before {
+  .plan::before {
     height: 200px;
   }
 
@@ -781,4 +764,29 @@ h2 {
     left: -40px;
     opacity: 0.4;
   }
+  
+  /* ================= */
+/* Correction affichage timeline mobile */
+/* ================= */
+.process tr::before {
+  position: static !important;
+  display: inline-block;
+  margin-right: 10px;
+  transform: none;
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.process tr:last-child::before {
+  content: "Livrable :";
+  position: static !important;
+  background: none;
+  padding: 0;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--livrable-color);
+}
+
 }
