@@ -763,4 +763,29 @@ h2 {
     left: -40px;
     opacity: 0.4;
   }
+  
+  /* ================= */
+/* Correction affichage timeline mobile */
+/* ================= */
+.process tr::before {
+  position: static !important;
+  display: inline-block;
+  margin-right: 10px;
+  transform: none;
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.process tr:last-child::before {
+  content: "Livrable :";
+  position: static !important;
+  background: none;
+  padding: 0;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--livrable-color);
+}
+
 }
