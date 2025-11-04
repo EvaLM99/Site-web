@@ -1,0 +1,162 @@
+/* ========================
+   ROCA
+   ======================== */
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Thin\ Italic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Light\ Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Bold\ Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Black\ Italic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Heavy.ttf') format('truetype');
+  font-weight: 950;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca';
+  src: url('fonts/Roca\ Heavy\ Italic.ttf') format('truetype');
+  font-weight: 950;
+  font-style: italic;
+}
+
+
+/* ========================
+   ROCA TWO
+   ======================== */
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Thin\ Italic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Light\ Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Bold\ Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Black\ Italic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Heavy.ttf') format('truetype');
+  font-weight: 950;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roca Two';
+  src: url('fonts/Roca\ Two\ Heavy\ Italic.ttf') format('truetype');
+  font-weight: 950;
+  font-style: italic;
+}

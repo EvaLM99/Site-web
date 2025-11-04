@@ -1,0 +1,234 @@
+/* ===================== */
+/* DESKTOP               */
+/* ===================== */
+.page-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-title img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+}
+
+.page-title h1, .page-title p {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.page-title h1 {
+  left: 15.8%;
+  top: 58%;
+}
+
+.page-title p {
+  left: 39%;
+  top: 70%;
+  width: 820px;
+  font-size: 25px;
+  text-align: left;
+}
+
+.download-portfolio {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-portfolio > :nth-child(2) {
+  background-color: var(--orange);
+  height: 50px;
+  border-radius: 50px;
+  line-height: 50px; 
+  padding: 0 50px;
+  text-align: center;
+  width: 310px;
+}
+
+.download-portfolio h1 {
+  width: 600px;
+}
+
+.download-portfolio > :nth-child(2) a {
+  color: white;
+  font-family: 'Roca';
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.graphic-creation, .digital-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.graphic-creation p {
+  width: 700px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.digital-section p {
+  width: 575px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.graphic-creation img {
+  width: 70%;
+}
+
+.digital-section img {
+  width: 75%;
+}
+
+.orange-block {
+  position: absolute;
+  top: 1820px;          
+  left: 0;       
+  width: 100%;   
+  height: 750px; 
+  background-color: rgb(255,231,175); 
+  z-index: -1; 
+}
+
+.sun-background {
+  position: absolute;  
+  top: 460px;
+  left: -160px;
+  height: auto;
+  z-index: 0;
+}
+
+/* ===================== */
+/* MOBILE (max-width:768px) */
+/* ===================== */
+@media (max-width: 768px) {
+  .page-title {
+    height: auto;
+    min-height: 60vh;
+    padding-bottom: 2rem;
+  }
+
+  .page-title img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 45vh;
+    object-fit: cover;
+  }
+
+  .page-title h1 {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    padding: 1.5rem 1.25rem 0.5rem;
+    font-size: clamp(24px, 6vw, 32px);
+    text-align: left;
+    width: 100%;
+    margin-top: -2rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .page-title p {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: auto;
+    padding: 0 1.25rem 1rem;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+
+  .graphic-creation, .digital-section {
+    align-items: flex-start;
+    padding: 0 1.25rem;
+  }
+
+  .graphic-creation h1, .digital-section h1 {
+    text-align: left;
+    width: 100%;
+  }
+
+  .graphic-creation p {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .digital-section p {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .graphic-creation img {
+    width: 100%;
+    max-width: 500px;
+    align-self: center;
+  }
+
+  .digital-section img {
+    width: 100%;
+    max-width: 500px;
+    align-self: center;
+  }
+
+  .download-portfolio {
+    flex-direction: column;
+    margin: 2rem 1.25rem;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .download-portfolio h1 {
+    width: 100%;
+    text-align: left;
+    font-size: clamp(22px, 5vw, 28px);
+  }
+
+  .download-portfolio > :nth-child(2) {
+    width: 100%;
+    max-width: 280px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 30px;
+    align-self: flex-start;
+  }
+
+  .download-portfolio > :nth-child(2) a {
+    font-size: 18px;
+  }
+
+  .orange-block {
+    top: auto;
+    position: relative;
+    height: auto;
+    min-height: 400px;
+    margin: 2rem 0;
+  }
+
+  .sun-background {
+    width: 120px;
+    top: auto;
+    left: -40px;
+    opacity: 0.4;
+  }
+}

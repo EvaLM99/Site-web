@@ -1,0 +1,766 @@
+/* ========================= */
+/* Fichier : prestations.css */
+/* ========================= */
+
+/* ================= */
+/* page-title section     */
+/* ================= */
+.page-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-title img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+}
+
+.page-title h1, .page-title p {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%;
+  color: white;
+}
+
+.page-title h1 {
+  top: 45%;
+  font-size: clamp(24px, 5vw, 50px);
+}
+
+.page-title p {
+  top: 55%;
+  width: 400px;
+  text-align: center;
+}
+
+/* ================= */
+/* Cards activities  */
+/* ================= */
+.activities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.activity-card {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: 'Roca Two', sans-serif;
+}
+
+/* ================= */
+/* Sections with vars*/
+/* ================= */
+
+/* Stratégie de communication (bordures jaunes, livrable orange) */
+.communication-strategy {
+  --main-color: var(--yellow);
+  --livrable-color: var(--orange);
+  margin: 0 30px;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Image de marque (bordures orange, livrable jaune) */
+.brand-guidance {
+  --main-color: var(--orange);
+  --livrable-color: var(--yellow);
+  margin: 0 30px;
+  display: flex;
+  gap: 2rem;
+}
+
+.graphic-supports {
+  margin: 0 30px;
+  display: flex;
+  gap: 2rem;
+}
+
+.social-media {
+  margin: 0 30px;
+  display: flex;
+  gap: 2rem;
+}
+
+.description {
+  width: 70%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.description h1:not(.support-card h1),
+.description p:not(.support-card p),
+.description h3:not(.support-card h3) {
+  margin: 0 0 1rem 0;
+}
+
+/* Titres h3 héritent de la couleur principale */
+.communication-strategy .description h3,
+.brand-guidance .description h3 {
+  color: var(--main-color);
+}
+
+.description > p {
+  font-style: italic;
+}
+
+.communication-strategy img, 
+.brand-guidance img,
+.graphic-supports img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  object-position: 41% 50%;
+  flex-shrink: 0;
+}
+
+.social-media img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  object-position: 87% center;
+  flex-shrink: 0;
+}
+
+.left {
+  border-bottom-right-radius: 75px;
+  border-top-right-radius: 75px;
+}
+
+.right {
+  border-bottom-left-radius: 75px;
+  border-top-left-radius: 75px;
+}
+
+.service-details {
+  margin-top: 20px;
+}
+
+.service-details  p {
+  font-family: 'Roca';
+  font-style: bold;
+}
+
+.service-details ul {
+  padding-left: 30px;       
+}
+
+/* ================= */
+/* Tables            */
+/* ================= */
+.process {
+  border-collapse: separate; 
+  border-spacing: 0;
+  width: 70%;
+  margin: 20px auto;
+}
+
+.process td {
+  border: 1px solid var(--main-color);
+  padding: 20px;
+  position: relative;
+}
+
+.process tr {
+  position: relative;
+  counter-increment: row;
+}
+
+/* Numéros */
+.process tr:not(:last-child)::before {
+  content: counter(row)".";
+  position: absolute;
+  left: 0;
+  top: 30%;
+  background: #fff;
+  border: 1px solid var(--main-color);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: var(--main-color);
+}
+
+/* "Livrable" → couleur distincte */
+.process tr:last-child::before {
+  content: "Livrable";
+  position: absolute;
+  top: -15px;
+  left: 15%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 2px 6px;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--livrable-color);
+  z-index: 2;
+}
+
+/* Alternance gauche/droite */
+.process tr:nth-child(even):not(:last-child)::before {
+  left: auto;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/* Suppression bordures pour effet timeline */
+.process tr:nth-child(odd) td {
+  border-right: none;
+  border-top: none;
+}
+
+.process tr:nth-child(even):not(:last-child) td {
+  border-left: none;
+  border-top: none;
+  text-align: end;
+}
+
+.process tr:nth-last-child(2) td:last-child {
+  border-bottom: none;
+}
+
+.process tr:nth-last-child(2) td:last-child::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10%;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.process tr:first-child td:first-child {
+  border-left: none;
+}
+
+.process tr:first-child td:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 70%;
+  border-left: 1px solid var(--main-color);
+}
+
+.process tr:last-child td {
+  border: none;
+  font-style: italic;
+}
+
+.supports, .plans {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mission-summary {
+  margin: 30px auto;
+}
+
+.qualities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 20px;
+}
+
+.supports {
+  margin: 5px auto;
+}
+
+.plans {
+  margin: 0;
+}
+
+.support-card {
+  width: 130px;
+  height: 100px;
+  border: 1px solid var(--orange);
+  border-radius: 10px 10px;
+  position: relative;
+  margin: 5px;
+  padding: 10px 10px 10px 0;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.plan-card {
+  width: 250px;
+  height: 400px;
+  border: 1px solid var(--yellow);
+  border-radius: 10px 10px;
+  position: relative;
+  margin: 5px;
+  padding: 20px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.quality-card {
+  width: 180px;
+  height: 80px;
+  border: 1px solid var(--orange);
+  border-radius: 10px 10px;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Barre horizontale du L inversé */
+.support:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 50px;
+  height: 8px;
+  background: #fff;
+}
+
+/* Barre verticale du L inversé */
+.support:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  width: 8px;
+  height: 63px;
+  background: #fff;
+}
+
+.plan:not(:last-child)::after {
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  width: 150px;
+  height: 30px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: var(--yellow);
+}
+
+.plan:first-child::after {
+  content: '50€';
+  font-style: italic;
+}
+
+.plan:nth-child(2):after {
+  content: '90€';
+  font-style: italic;
+}
+
+.plan:last-child:after {
+  content: 'Sur devis\A A partir de 550€';
+  white-space: pre;
+  font-style: italic;
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  width: 150px;
+  height: 30px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: var(--yellow); 
+}
+
+/* Barre verticale du L inversé */
+.plan::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  width: 8px;
+  height: 260px;
+  background: #fff;
+}
+
+.support-card .support-type,
+.support-card .support-description {
+  text-align: right;
+}
+
+/* Prix toujours à 10px du bas et à gauche (ou droite si tu veux) */
+.support-card .support-price {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  text-align: right;
+  color: var(--orange);
+}
+
+.plan-card > ul {
+  padding-left: 20px;
+}
+
+.plan-card > p {
+  font-family: 'Roca';
+}
+
+.custom-service {
+  color: white;
+  margin: 20px 0;
+  text-align: center;
+  padding: 60px 340px;
+}
+
+.custom-service > h1 {
+  font-size: 45px;
+}
+
+.custom-service > p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.mission-summary > h1 {
+  text-align: center;
+  font-size: 45px;
+}
+
+.mission-summary > p {
+  margin: 20px 400px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.quality-card > *:first-child {
+  font-size:24px; 
+  text-align: left;
+}
+
+.quality-card > *:last-child{
+  font-size:21px; 
+  text-align: right;
+}
+
+.quality-card:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 50px;
+  height: 8px;
+  background: #fff;
+}
+
+/* Barre verticale du L inversé */
+.quality-card:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  width: 8px;
+  height: 63px;
+  background: #fff;
+}
+
+/* ================= */
+/* Portfolio link    */
+/* ================= */
+.portfolio-presentation a {
+  display: flex;
+  margin: 50px auto;
+  font-size: 24px;
+  font-family: 'Roca Two', sans-serif;
+  color: white;
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: normal;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.trusted img {
+  width: 95%;
+}
+
+.trusted {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.orange-block {
+  position: absolute;
+  top: 1300px;          
+  left: 0;       
+  width: 100%;   
+  height: 475px; 
+  background-color: rgb(255,231,175); 
+  z-index: -1; 
+}
+
+.yellow-block {
+  position: absolute;
+  top: 4850px;          
+  left: 0;       
+  width: 100%;   
+  height: 300px; 
+  background-color: rgb(239,166,63); 
+  z-index: -1; 
+}
+
+.custom-service img {
+  position: absolute;  
+  top: 4850px;
+  right: 0;
+  width: 20%;
+  height: auto;
+  z-index: 0;
+}
+
+.sun-background{
+  position: absolute;  
+  top: 460px;
+  left: -160px;
+  height: auto;
+  z-index: 0;
+}
+
+/* ================= */
+/* MOBILE            */
+/* ================= */
+@media (max-width: 768px) {
+  /* page-title section */
+  .page-title {
+    height: auto;
+    min-height: 60vh;
+    padding-bottom: 2rem;
+  }
+
+  .page-title img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 45vh;
+  }
+
+  .page-title h1, .page-title p {
+    position: relative;
+    left: auto;
+    transform: none;
+    max-width: 100%;
+    padding: 0 1.25rem;
+    text-align: left;
+  }
+
+  .page-title h1 {
+    top: auto;
+    margin-top: -2rem;
+    font-size: clamp(24px, 6vw, 32px);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .page-title p {
+    top: auto;
+    width: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+
+  /* Activities cards */
+  .activities {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 1rem;
+    padding: 0 1.25rem;
+    margin: 2rem auto;
+  }
+
+  .activity-card {
+    padding: 1rem;
+  }
+
+  /* Sections prestations */
+  .communication-strategy,
+  .brand-guidance,
+  .graphic-supports,
+  .social-media {
+    flex-direction: column;
+    margin: 2rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .description {
+    width: 100%;
+    padding: 0;
+  }
+
+  .communication-strategy img, 
+  .brand-guidance img,
+  .graphic-supports img,
+  .social-media img {
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    border-radius: 15px;
+  }
+
+  .left, .right {
+    border-radius: 15px;
+  }
+
+  /* Process table */
+  .process {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+  }
+
+  .process td {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .process tr:not(:last-child)::before {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  /* Supports et Plans */
+  .supports, .plans {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1.25rem;
+    margin: 1.5rem auto;
+  }
+
+  .support, .plan-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .plan-card {
+    height: auto;
+    min-height: 350px;
+    padding-bottom: 60px;
+  }
+
+  .plan::before {
+    height: 200px;
+  }
+
+  /* Qualités */
+  .qualities {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 1.25rem;
+  }
+
+  .quality-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    height: auto;
+    min-height: 70px;
+  }
+
+  /* Synthèse */
+  .mission-summary > h1 {
+    font-size: clamp(28px, 6vw, 38px);
+    padding: 0 1.25rem;
+  }
+
+  .mission-summary > p {
+    margin: 1.5rem 1.25rem;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  /* Prestation personnalisée */
+  .custom-service {
+    padding: 2rem 1.25rem;
+    text-align: left;
+  }
+
+  .custom-service > h1 {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .custom-service > p {
+    margin-top: 1rem;
+    font-size: 16px;
+  }
+
+  .custom-service img {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 200px;
+    margin: 1.5rem auto 0;
+    display: block;
+  }
+
+  /* Portfolio link */
+  .portfolio-presentation a {
+    width: 90%;
+    max-width: 280px;
+    font-size: 18px;
+    height: 48px;
+    margin: 2rem auto;
+  }
+
+  /* trusted */
+  .trusted {
+    margin: 2rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .trusted img {
+    width: 100%;
+  }
+
+  /* Blocks de couleur */
+  .orange-block, .yellow-block {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 300px;
+    margin: 2rem 0;
+  }
+
+  /* Soleil arrière-plan */
+  .sun-background {
+    width: 120px;
+    top: auto;
+    left: -40px;
+    opacity: 0.4;
+  }
+}

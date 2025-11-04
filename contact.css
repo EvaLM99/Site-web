@@ -1,0 +1,261 @@
+/* ===================== */
+/* DESKTOP               */
+/* ===================== */
+.page-title {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 55vh;
+  overflow: hidden;
+  top: 33px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title img {
+  width: 100%;
+  height: 100%;      
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  clip-path: inset(0 1% 0% 0);
+  top: 10%;
+  object-position: top; 
+}
+
+.page-title h1 {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  color: white;
+  text-align: left;
+  z-index: 2;
+}
+
+.discussion-section {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  align-items: center;
+}
+
+.discussion-section > p {
+  background-color: var(--orange);
+  color: white;
+  font-family: 'Roca';
+  font-size: 25px;
+  height: 50px;
+  border-radius: 50px;
+  line-height: 50px; 
+  padding: 0 50px;
+  text-align: center;
+  width: 310px;
+}
+
+.discussion-text h1 {
+  width: 400px;
+}
+
+.discussion-text p {
+  width: 330px;
+}
+
+.services-description a {
+  display: flex;
+  margin: 50px 0;
+  font-size: 24px;
+  font-family: 'Roca Two', sans-serif;
+  color: white;
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: normal;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.email-link {
+  display: inline-block;
+  background: var(--yellow);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 40px;
+  font-size: 20px;
+  border-radius: 15px;
+  margin: 50px auto;
+  width: 75%;
+}
+
+.services-description h1 {
+  font-size: clamp(18px, 4vw, 35px);
+}
+
+#unique-project{
+  width: 75%;
+  text-align: center;
+}
+
+.services-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.services-section img {
+  max-width: 500px;  
+  width: 100%;       
+  height: auto;
+  flex: 0 0 auto;    
+}
+
+/* Texte à côté */
+.services-description {
+  flex: 1;
+  min-width: 250px;
+  width: 320px;
+}
+
+/* ===================== */
+/* MOBILE (max-width:768px) */
+/* ===================== */
+@media (max-width: 768px) {
+  /* page-title section */
+  .page-title {
+    height: auto;
+    min-height: 50vh;
+    top: 0;
+    padding-bottom: 2rem;
+  }
+
+  .page-title img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 40vh;
+    clip-path: none;
+    top: 0;
+    object-position: center;
+  }
+
+  .page-title h1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 1.5rem 1.25rem;
+    font-size: clamp(24px, 6vw, 32px);
+    margin-top: -2rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+
+  /* contact-content général */
+  .contact-content {
+    padding: 0 1.25rem;
+  }
+
+  /* Section discussion */
+  .discussion-section {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 1.25rem;
+    align-items: flex-start;
+  }
+
+  .discussion-section > p {
+    width: 100%;
+    max-width: 280px;
+    font-size: 18px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 30px;
+  }
+
+  .discussion-text h1 {
+    width: 100%;
+    font-size: clamp(22px, 5vw, 28px);
+  }
+
+  .discussion-text p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+  }
+
+  /* services-section */
+  .services-section {
+    flex-direction: column;
+    padding: 1.5rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .services-section img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .services-description {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .services-description h1 {
+    font-size: clamp(22px, 5vw, 28px);
+    margin-bottom: 1rem;
+  }
+
+  .services-description p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .services-description a {
+    width: 100%;
+    max-width: 200px;
+    font-size: 18px;
+    height: 48px;
+    margin: 1.5rem 0;
+  }
+
+  /* Send email button */
+  .email-link {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 2rem auto;
+    box-sizing: border-box;
+  }
+
+  /* Unique project section */
+  #unique-project {
+    width: 100%;
+    padding: 0 1.25rem;
+    text-align: left;
+  }
+
+  #unique-project h1 {
+    font-size: clamp(22px, 5vw, 28px);
+  }
+
+  #unique-project p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
