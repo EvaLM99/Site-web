@@ -4,18 +4,11 @@
 .page-title {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 55vh;
   overflow: hidden;
   top: 33px;
-}
-
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .page-title img {
@@ -28,6 +21,16 @@
   top: 10%;
   object-position: top; 
 }
+
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 .page-title h1 {
   position: absolute;
@@ -138,28 +141,32 @@
 @media (max-width: 768px) {
   /* page-title section */
   .page-title {
-    height: auto;
-    min-height: 50vh;
+    height: 28.1vh;
+    min-height: 205px;
+    padding-bottom: 0;
+    position: relative;
     top: 0;
-    padding-bottom: 2rem;
+    overflow: hidden;
   }
 
   .page-title img {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: auto;
-    min-height: 40vh;
-    clip-path: none;
+    height: 208%;
+    object-fit: cover;
+    object-position: center top;
     top: 0;
-    object-position: center;
+    left: 0;
+    display: block;
+    clip-path: none;
   }
 
   .page-title h1 {
-    position: relative;
-    top: auto;
-    left: auto;
+    position: absolute;
+    top: 150px;
+    left: 20px;
     padding: 1.5rem 1.25rem;
-    font-size: clamp(24px, 6vw, 32px);
+    font-size: clamp(24px, 8vw, 32px);
     margin-top: -2rem;
     text-shadow: 0 2px 8px rgba(0,0,0,0.4);
   }

@@ -118,19 +118,21 @@
   /* page-title section - TEXTE SUR L'IMAGE */
   .page-title {
     height: auto;
-    min-height: 50vh;
+    min-height: 0;
     padding-bottom: 0;
     position: relative;
   }
 
   .page-title img {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100%;
-    max-height: none;
-    object-fit: contain;
+    height: 28.1vh;
+    min-height: 150px;
+    object-fit: cover;
+    object-position: center;
     top: 0;
     left: 0;
+    display: block;
   }
 
   .page-title h1, .page-title p {
@@ -162,6 +164,10 @@
   }
 
   /* Sections création graphique et digital */
+
+  .graphic-creation {
+    margin: 2rem auto;
+  }
   .graphic-creation, .digital-section {
     align-items: flex-start;
     padding: 0 1.25rem;
@@ -227,18 +233,13 @@
 
   /* Blocks de couleur */
   .orange-block {
-    top: auto;
-    position: relative;
-    height: auto;
-    min-height: 400px;
-    margin: 2rem 0;
+    display: none;
   }
 
   /* Soleil arrière-plan */
   .sun-background {
-    width: 120px;
-    top: auto;
-    left: -40px;
-    opacity: 0.4;
+    width: 300px;
+    top: 220px;
+    left: -140px;
   }
 }

@@ -510,7 +510,7 @@ h2 {
   gap: 30px;
 }
 
-.orange-block {
+.yellow-block {
   position: absolute;
   top: 1300px;          
   left: 0;       
@@ -520,7 +520,7 @@ h2 {
   z-index: -1; 
 }
 
-.yellow-block {
+.orange-block {
   position: absolute;
   top: 4850px;          
   left: 0;       
@@ -555,7 +555,7 @@ h2 {
   
   .page-title {
     height: auto;
-    min-height: 50vh;
+    min-height: 0;
     padding-bottom: 0;
     position: relative;
   }
@@ -563,9 +563,10 @@ h2 {
   .page-title img {
     position: relative;
     width: 100%;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
+    height: 28.1vh;
+    min-height: 150px;
+    object-fit: cover;
+    object-position: center;
     top: 0;
     left: 0;
     display: block;
@@ -582,14 +583,14 @@ h2 {
   }
 
   .page-title h1 {
-    top: 40%;
+    top: 30%;
     margin-top: 0;
     font-size: clamp(24px, 6vw, 32px);
     text-shadow: 0 2px 10px rgba(0,0,0,0.8);
   }
 
   .page-title p {
-    top: 55%;
+    top: 65%;
     width: auto;
     max-width: 90%;
     font-size: 15px;
@@ -640,34 +641,48 @@ h2 {
     border-radius: 15px;
   }
 
-  /* Process table - CORRECTION TIMELINE */
+  /* Process table - REFONTE COMPLETE */
   .process {
     width: 100%;
     margin: 1.5rem 0;
-    padding: 0 1.25rem;
+    padding: 0;
     box-sizing: border-box;
+    border-spacing: 0 10px; /* Espacement vertical entre les lignes */
   }
 
-  /* Masquer les numéros et "Livrable" sur mobile */
+  /* Masquer tous les pseudo-éléments du desktop */
   .process tr::before,
-  .process tr:not(:last-child)::before,
-  .process tr:last-child::before {
+  .process tr::after,
+  .process td::after {
     display: none !important;
   }
 
-  .process td {
-    padding: 15px;
-    font-size: 14px;
+  /* Réinitialiser toutes les bordures */
+  .process tr td {
     border: 1px solid var(--main-color) !important;
     text-align: left !important;
+    padding: 15px;
+    font-size: 14px;
+    display: block; /* Chaque td prend toute la largeur */
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  /* Ajouter les numéros directement dans le contenu */
-  .process tr:not(:last-child) td::before {
+  /* Ajouter les numéros directement dans le contenu avec un style propre */
+  .process tr:not(:last-child) td h3::before {
     content: counter(row) ". ";
     font-weight: bold;
     color: var(--main-color);
-    margin-right: 5px;
+    margin-right: 8px;
+  }
+
+  /* Style du livrable */
+  .process tr:last-child td {
+    border: 2px solid var(--livrable-color) !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    font-weight: 500;
+    padding: 15px;
   }
 
   .process tr:last-child td::before {
@@ -675,6 +690,24 @@ h2 {
     font-weight: bold;
     color: var(--livrable-color);
     font-style: italic;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  /* Espacer les étapes */
+  .process tr:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  /* Supprimer les marges par défaut des h3 dans les tables */
+  .process td h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .process td p {
+    margin: 0;
   }
 
   /* Supports et Plans */
@@ -733,6 +766,7 @@ h2 {
   .custom-service {
     padding: 2rem 1.25rem;
     text-align: left;
+    background-color: rgb(239,166,63); ;
   }
 
   .custom-service > h1 {
@@ -745,13 +779,7 @@ h2 {
   }
 
   .custom-service img {
-    position: relative;
-    top: auto;
-    right: auto;
-    width: 100%;
-    max-width: 200px;
-    margin: 1.5rem auto 0;
-    display: block;
+    display: none;
   }
 
   /* Portfolio link */
@@ -765,8 +793,10 @@ h2 {
 
   /* trusted */
   .trusted {
-    margin: 2rem 1.25rem;
+    margin: 2rem 0;
     gap: 1.5rem;
+    background-color: rgb(255,231,175); 
+    width: 100%;
   }
 
   .trusted img {
@@ -774,19 +804,16 @@ h2 {
   }
 
   /* Blocks de couleur */
-  .orange-block, .yellow-block {
-    position: relative;
-    top: auto;
-    height: auto;
-    min-height: 300px;
-    margin: 2rem 0;
+
+  .yellow-block, .orange-block {
+    display: none;
   }
+
 
   /* Soleil arrière-plan */
   .sun-background {
-    width: 120px;
-    top: auto;
-    left: -40px;
-    opacity: 0.4;
+    width: 300px;
+    top: 220px;
+    left: -140px;
   }
 }

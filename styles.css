@@ -67,6 +67,8 @@ nav a:hover {
   color: #9C3F09;
 }
 
+
+
 /* ===================== */
 /* COULEURS SPÉCIALES    */
 /* ===================== */
@@ -120,7 +122,7 @@ footer > ul > li {
   list-style-type: none;
 }
 
-footer a:visited {
+footer a, footer a:visited {
   color: var(--orange)
 }
 
@@ -192,6 +194,12 @@ footer a:visited {
     padding: 0 1.25rem;
   }
   
+  footer p {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 
   footer > img {
     width: 40px;
